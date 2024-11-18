@@ -15,33 +15,33 @@
         <div class="flex-center position-ref full-height">
 
            <div class="content">
-                <div class="title m-b-md">
+                <h1 class="title m-b-md">
                     Pizza List
-                </div>
-                <h1><?php echo(htmlspecialchars($type)) ?> - <?php echo(htmlspecialchars($base)) ?> - <?php echo(htmlspecialchars($price)) ?> </h1>  <!-- using regular php -->
-                <h1>{{ $type }} - {{ $base }} - {{ $price }}</h1>  <!-- using blade syntax -->
+                </h1>
 
-                <!-- In Laravel's Blade templating engine, the @ symbol is used to indicate a Blade directive.  -->
-                @if($price > 15)
-                    <p>The Pizza is expensive</p>
-                @elseif($price < 5)
-                    <p>The Pizza is cheap</p>
-                @else
-                    <p>This pizza is normall priced</p>
-                @endif
+                <!-- @for($i = 0; $i < 5; $i++)
+                    <p>The value of i is {{ $i }}</p>
+                @endfor -->
+                
+                <!-- @for($i = 0; $i < count($pizzas); $i++)
+                    <p>{{ $pizzas[$i]['type'] }}</p>
+                @endfor -->
 
-                <!-- This only output if it's false. (somehow like opposite of if statement) -->
-                @unless($base == 'chessy crust')
-                    <p>you don't have a Chessy crust</p>
-                @endunless
+                @foreach($pizzas as $pizza)
+                    <div> 
 
+                        {{ $loop->index +1}}: {{ $pizza['type'] }} - {{ $pizza['base'] }} 
 
-                <!-- using PHP directive to input some vanilla PHP inside -->
-                @php
-                    $name = 'Emmy';
-                    echo($name);
-                @endphp
+                        @if($loop->first)
+                            <span>first in the loop</span>
+                        @endif
 
+                        @if($loop->last)
+                            <span>last in the loop</span>
+                        @endif
+                        
+                    </div>
+                @endforeach
            </div>
            
         </div>

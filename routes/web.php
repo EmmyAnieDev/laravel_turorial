@@ -12,10 +12,11 @@ Route::get('/pizzas', function () {
     // get data from db
 
     $pizzas = [
-        'type' => 'Pepperoni',
-        'base' => 'chessy crust',
-        'price' => 10,
+        ['type' => 'Pepperoni', 'base' => 'Cheesy Crust'],
+        ['type' => 'Margherita', 'base' => 'Thin Crust'],
+        ['type' => 'BBQ Chicken', 'base' => 'Stuffed Crust'],
     ];
+    
 
-    return view('pizzas', $pizzas);
+    return view('pizzas',['pizzas' => $pizzas]);
 });
