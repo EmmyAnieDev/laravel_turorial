@@ -5,3 +5,5 @@
 -   When passind data to the view, we add a second argument to the VIEW function which the data we want to pass to the view.
 
 -   Query Parameters are ways we can add/inject values or variables into our URL.
+
+-   Route Parameters also known as Wildcards in Laravel. They are part of the URL structure and don't use a variable name.

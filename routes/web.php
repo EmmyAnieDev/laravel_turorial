@@ -28,3 +28,12 @@ Route::get('/pizzas', function () {
         ]
     );
 });
+
+// Add {id} as a wildcard to the URL and pass the id as a parameter to the function, making it accessible within the function.
+Route::get('/pizzas/{id}', function ($id) {
+
+    // use the $id parameter(variable) to query the db for a record.
+    return view('details', ['id' => $id]);
+
+});
+
