@@ -16,7 +16,15 @@ Route::get('/pizzas', function () {
         ['type' => 'Margherita', 'base' => 'Thin Crust'],
         ['type' => 'BBQ Chicken', 'base' => 'Stuffed Crust'],
     ];
+
     
 
-    return view('pizzas',['pizzas' => $pizzas]);
+    return view(
+
+        'pizzas',[
+            'pizzas' => $pizzas, 
+            'names' => request('name'), // Retrieve the value of the 'name' field from the HTTP request and assign it to the 'names' key.
+            'ages' => request('age')
+        ]
+    );
 });
