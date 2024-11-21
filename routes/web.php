@@ -1,39 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', function () {
-
-    // passing data to the viewS
-    // get data from db
-
-    $pizzas = [
-        ['type' => 'Pepperoni', 'base' => 'Cheesy Crust'],
-        ['type' => 'Margherita', 'base' => 'Thin Crust'],
-        ['type' => 'BBQ Chicken', 'base' => 'Stuffed Crust'],
-    ];
-
-    
-
-    return view(
-
-        'pizzas',[
-            'pizzas' => $pizzas, 
-            'names' => request('name'), // Retrieve the value of the 'name' field from the HTTP request and assign it to the 'names' key.
-            'ages' => request('age')
-        ]
-    );
-});
+// This tells Laravel to use the PizzaController's index method to handle the request.
+Route::get('/pizzas', [PizzaController::class, 'index']);
 
 // Add {id} as a wildcard to the URL and pass the id as a parameter to the function, making it accessible within the function.
-Route::get('/pizzas/{id}', function ($id) {
-
-    // use the $id parameter(variable) to query the db for a record.
-    return view('details', ['id' => $id]);
-
-});
+Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
 

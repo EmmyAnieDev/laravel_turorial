@@ -9,8 +9,8 @@
                     Pizza List
                 </h1>
 
-                <p class="text-lg text-black dark:text-white"> {{ $names }}</p>
-                <p class="text-lg text-black dark:text-white"> {{ $ages }}</p>
+                <p class="text-lg text-black dark:text-white"> {{ $name }}</p>
+                <p class="text-lg text-black dark:text-white"> {{ $age }}</p>
 
                 <div class="mt-6 space-y-4">
                     @foreach($pizzas as $pizza)
