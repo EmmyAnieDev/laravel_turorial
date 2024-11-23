@@ -15,3 +15,9 @@
 -   We use one controller for a specific group of route, which contain numerous function for that group of route.
 
 -   To create a Controller we run "php artisan make:controller ControllerName (PizzaController)".
+
+-   Migrations: This is creating tables in the Database.
+
+-   To create a migration file, we run "php artisan make:migration create_table_name (create_pizzas_table)".
+
+-   To run a migration, we run "php artisan migrate". this looks at all our migration and try to migrate all of them by runing the "up" function in each one of them.
