@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
@@ -11,19 +12,14 @@ class PizzaController extends Controller
         // passing data to the views
         // get data from db
     
-        $pizzas = [
-            ['type' => 'Pepperoni', 'base' => 'Cheesy Crust'],
-            ['type' => 'Margherita', 'base' => 'Thin Crust'],
-            ['type' => 'BBQ Chicken', 'base' => 'Stuffed Crust'],
-        ];
+        $pizzas = Pizza::all();
+        # $pizzas = Pizza::latest()->get(); return by latest added.
+        # $pizzas = Pizza::orderBy('id', 'desc')->get();
+        # $pizzas = Pizza::where('name', 'shaun')->get();  // return all pizzas with name "shuan". 
     
         return view(
     
-            'pizzas',[
-                'pizzas' => $pizzas, 
-                'name' => request('name'), // Retrieve the value of the 'name' field from the HTTP request and assign it to the 'names' key.
-                'age' => request('age')
-            ]
+            'pizzas',['pizzas' => $pizzas]
 
         );
        

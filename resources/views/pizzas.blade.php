@@ -9,23 +9,16 @@
                     Pizza List
                 </h1>
 
-                <p class="text-lg text-black dark:text-white"> {{ $name }}</p>
-                <p class="text-lg text-black dark:text-white"> {{ $age }}</p>
-
                 <div class="mt-6 space-y-4">
+
                     @foreach($pizzas as $pizza)
+
                         <div class="text-lg text-black dark:text-white">
-                            {{ $loop->index +1 }}: {{ $pizza['type'] }} - {{ $pizza['base'] }} 
-
-                            @if($loop->first)
-                                <span class="text-green-500">first in the loop</span>
-                            @endif
-
-                            @if($loop->last)
-                                <span class="text-red-500">last in the loop</span>
-                            @endif
+                        {{ $pizza->id }}: {{ $pizza->type }} - {{ $pizza->base }} - ${{ $pizza->price }} - {{ $pizza->name }} 
                         </div>
+
                     @endforeach
+
                 </div>
             </div>
         </div>

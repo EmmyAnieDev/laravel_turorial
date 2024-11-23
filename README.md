@@ -27,3 +27,7 @@
 -   To rollback last migration, we run "php artisan migration:rollback".
 
 -   To add a new column to an exisiting table in the database, we run "php artisan make:migration add_columnName_to_tableName_table (add_price_to_pizzas_table)". This command will add the "price" to the existing "pizzas" table. then we run "php artisan migrate" to add it to the table in the database.
+
+-   Model is a class or an object blueprint that represent a certain type of data.
+
+-   To create an Eloquent Model for the table "pizzas", we run "php artisan make:model Pizza"
