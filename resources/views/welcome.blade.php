@@ -42,6 +42,8 @@
                 <div class="title m-b-md text-3xl font-bold text-black dark:text-white">
                     The North's Best Pizzas
                 </div>
+
+                <a href="/pizzas/create" class="create-pizza-link">Create Pizza</a>
             </div>
         </div>
     </div>

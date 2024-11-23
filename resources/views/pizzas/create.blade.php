@@ -5,15 +5,27 @@
     <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
         <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
             <div class="content flex flex-col items-center justify-center text-center">
-                <h1 class="title m-b-md text-3xl font-bold text-black dark:text-white">
-                    Pizza List
-                </h1>
+                <div class="wrapper create-pizza">
 
-                <div class="mt-6 space-y-4">
+                    <h1> Create a new Pizza </h1>
 
-                    <div class="text-lg text-black dark:text-white">
-                        Add a new pizza
-                    </div>
+                    <form action="/pizzas" method="POST">
+                        <label for="name">Your name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="type">Choose pizza type:</label>
+                        <select name="type" id="type">
+                            <option value="Pepperoni">Pepperoni</option>
+                            <option value="Margherita">Margherita</option>
+                            <option value="BBQ Chicken">BBQ Chicken</option>
+                        </select>
+                        <label for="base">Choose base type:</label>
+                        <select name="base" id="base">
+                            <option value="Cheesy Crust">Cheesy Crust</option>
+                            <option value="Thin Crust">Thin Crust</option>
+                            <option value="Stuffed Crust">Stuffed Crust</option>
+                        </select>
+                        <input type="submit" value="Order Pizza">
+                    </form>
 
                 </div>
             </div>
@@ -21,3 +33,6 @@
     </div>
 </div>
 @endsection
+
+
+
