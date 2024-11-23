@@ -19,7 +19,7 @@ class PizzaController extends Controller
     
         return view(
     
-            'pizzas',['pizzas' => $pizzas]
+            'pizzas.index',['pizzas' => $pizzas]
 
         );
        
@@ -29,7 +29,15 @@ class PizzaController extends Controller
     public function show($id){
 
         // use the $id parameter(variable) to query the db for a record.
-        return view('details', ['id' => $id]);
+        return view('pizzas.show', ['id' => $id]);
+
+    }
+
+
+    public function create(){
+
+        // use the $id parameter(variable) to query the db for a record.
+        return view('pizzas.create');
 
     }
 }

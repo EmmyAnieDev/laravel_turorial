@@ -11,6 +11,8 @@ Route::get('/', function () {
 // When a request comes in for the (/pizzas) the routes files knows to use the PizzaController and fires the index action/method.
 Route::get('/pizzas', [PizzaController::class, 'index']); // Referencing the Controller inside the Route.
 
+Route::get('/pizzas/create', [PizzaController::class, 'create']);
+
 // Add {id} as a wildcard to the URL and pass the id as a parameter to the function, making it accessible within the function.
 Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
 
