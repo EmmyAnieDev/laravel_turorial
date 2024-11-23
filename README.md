@@ -21,3 +21,9 @@
 -   To create a migration file, we run "php artisan make:migration create_table_name (create_pizzas_table)".
 
 -   To run a migration, we run "php artisan migrate". this looks at all our migration and try to migrate all of them by runing the "up" function in each one of them.
+
+-   To check status of our migration, we run "php artisan migration:status".
+
+-   To rollback last migration, we run "php artisan migration:rollback".
+
+-   To add a new column to an exisiting table in the database, we run "php artisan make:migration add_columnName_to_tableName_table (add_price_to_pizzas_table)". This command will add the "price" to the existing "pizzas" table. then we run "php artisan migrate" to add it to the table in the database.
