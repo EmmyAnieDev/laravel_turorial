@@ -5,11 +5,23 @@
     <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
         <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
             <div class="content flex flex-col items-center justify-center text-center">
-                <h1 class="title m-b-md text-3xl font-bold text-black dark:text-white">
 
-                    Pizza List - {{ $id }}
+                @if ($pizza)
 
-                </h1>
+                    <h1 class="title m-b-md text-black dark:text-white">
+                        Ordered Pizza By {{ $pizza->name }}
+                    </h1>
+
+                    <p>
+                        {{ $pizza->type }} - {{ $pizza->base }} : ${{ $pizza->price }}
+                    </p>
+
+                    <a href="/pizzas" class="back"><- Back to all pizzas</a>
+            
+                @else
+                        No Pizza found for the given Id.
+                @endif
+
             </div>
         </div>
     </div>
