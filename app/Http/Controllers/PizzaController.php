@@ -41,4 +41,15 @@ class PizzaController extends Controller
         return view('pizzas.create');
 
     }
+
+
+    public function store(){
+
+        error_log(request('name'));  // Log the value of the 'name' parameter from the incoming request
+        error_log(request('type'));
+        error_log(request('base'));
+
+        return redirect('/');
+
+    }
 }
