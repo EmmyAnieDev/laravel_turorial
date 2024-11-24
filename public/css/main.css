@@ -756,6 +756,12 @@ video {
     color: #5e2195;
 }
 
+.mssg {
+    font-size: 20px;
+    padding: 12px 0 0 0;
+    color: #783;
+}
+
 /* Create Form Styling */
 form label {
     display: block;
@@ -764,6 +770,7 @@ form label {
 }
 
 form input[type="text"],
+form input[type="number"],
 form select {
     width: 100%;
     padding: 0.5rem;

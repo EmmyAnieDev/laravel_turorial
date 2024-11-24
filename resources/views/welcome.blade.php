@@ -43,6 +43,8 @@
                     The North's Best Pizzas
                 </div>
 
+                <p class="mssg"> {{ session('mssg') }} </p>
+
                 <a href="/pizzas/create" class="create-pizza-link">Create Pizza</a>
             </div>
         </div>

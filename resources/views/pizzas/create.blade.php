@@ -25,6 +25,8 @@
                             <option value="Thin Crust">Thin Crust</option>
                             <option value="Stuffed Crust">Stuffed Crust</option>
                         </select>
+                        <label for="price">Your price:</label>
+                        <input type="number" id="price" name="price">
                         <input type="submit" value="Order Pizza">
                     </form>
 

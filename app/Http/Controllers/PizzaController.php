@@ -17,11 +17,7 @@ class PizzaController extends Controller
         # $pizzas = Pizza::orderBy('id', 'desc')->get();
         # $pizzas = Pizza::where('name', 'shaun')->get();  // return all pizzas with name "shuan". 
     
-        return view(
-    
-            'pizzas.index',['pizzas' => $pizzas]
-
-        );
+        return view('pizzas.index', ['pizzas' => $pizzas]);
        
     }
 
@@ -45,11 +41,16 @@ class PizzaController extends Controller
 
     public function store(){
 
-        error_log(request('name'));  // Log the value of the 'name' parameter from the incoming request
-        error_log(request('type'));
-        error_log(request('base'));
+        $pizza = new Pizza();   // create an object for the Pizza Model class
 
-        return redirect('/');
+        $pizza->name = request('name'); // Set the "name" property of the Pizza model from the request input.
+        $pizza->type = request('type');
+        $pizza->base = request('base');
+        $pizza->price = request('price');
+
+        $pizza->save();    // call save method from the Model class using the "pizza" object.
+
+        return redirect('/')->with('mssg', 'Thanks for ordering!'); // show message to the user.
 
     }
 }
