@@ -47,10 +47,13 @@ class PizzaController extends Controller
         $pizza->type = request('type');
         $pizza->base = request('base');
         $pizza->price = request('price');
+        $pizza->toppings = request('toppings');
+
+        error_log($pizza);
 
         $pizza->save();    // call save method from the Model class using the "pizza" object.
 
-        return redirect('/')->with('mssg', 'Thanks for ordering!'); // show message to the user.
+       return redirect('/')->with('mssg', 'Thanks for ordering!'); // show message to the user.
 
     }
 }

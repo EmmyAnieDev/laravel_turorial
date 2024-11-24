@@ -16,6 +16,20 @@
                         {{ $pizza->type }} - {{ $pizza->base }} : ${{ $pizza->price }}
                     </p>
 
+                    @if($pizza->toppings != null)
+
+                        <p> Extra Toppings: </p>
+
+                        <ul>
+                            @foreach( $pizza->toppings as $topping )
+
+                                <li> {{ $topping }} </li> 
+                            
+                            @endforeach
+                        </ul>
+
+                    @endif
+
                     <a href="/pizzas" class="back"><- Back to all pizzas</a>
             
                 @else

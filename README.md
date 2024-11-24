@@ -31,3 +31,7 @@
 -   Model is a class or an object blueprint that represent a certain type of data.
 
 -   To create an Eloquent Model for the table "pizzas", we run "php artisan make:model Pizza"
+
+-   In MySQL we can't store an Array as a data type but we can store JSON strig that can represet an Array.
+
+-   Attribute casting in Laravel is a feature that allows you to automatically convert model attributes to a specific data type when they are accessed or saved.
