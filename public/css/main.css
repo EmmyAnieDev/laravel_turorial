@@ -748,6 +748,10 @@ video {
     }
 }
 
+.red-text {
+    color: #e0251d;
+}
+
 .title {
     font-size: 50px;
     text-transform: uppercase;

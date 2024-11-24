@@ -30,7 +30,13 @@
 
                     @endif
 
-                    <a href="/pizzas" class="back"><- Back to all pizzas</a>
+                    <form action="/pizzas/{{$pizza->id}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="create-pizza-link">Delete Orders</button>
+                    </form>
+
+                    <a href="/pizzas" class="red-text"><- Back to all pizzas</a>
             
                 @else
                         No Pizza found for the given Id.
