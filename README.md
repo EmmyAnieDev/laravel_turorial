@@ -32,7 +32,7 @@
 
 -   To create an Eloquent Model for the table "pizzas", we run "php artisan make:model Pizza"
 
--   In MySQL we can't store an Array as a data type but we can store JSON strig that can represet an Array.
+-   In MySQL we can't store an Array as a data type but we can store JSON string that can represent an Array.
 
 -   Attribute casting in Laravel is a feature that allows you to automatically convert model attributes to a specific data type when they are accessed or saved.
 
@@ -41,3 +41,7 @@
 -   Browser can't understannd SAAS in it raw form, so we don't add it to our "Public" directory.
 
 -   To be able to use the SAAS we need to istall a package called "vite" by running "npm install", then "npm add -D sass", then "npm run dev"
+
+-   Laravel comes with complete Authenticated system. A lot of the Backend is setup for us, we just need to create the Frontend.
+
+-   To install UI package we run "composer require laravel/ui", then "php artisan ui vue --auth", then "npm install" && "npm run dev"

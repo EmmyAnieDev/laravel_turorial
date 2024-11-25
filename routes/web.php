@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,3 +23,7 @@ Route::post('/pizzas', [PizzaController::class, 'store']);
 
 Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']); 
 
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index']);
