@@ -19,7 +19,7 @@
                         @else
                             <a
                                 href="{{ route('login') }}"
-                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                class="rounded-md px-3 py-2 text-red-500 ring-1 ring-transparent transition hover:text-red/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                             >
                                 Log in
                             </a>
@@ -27,7 +27,7 @@
                             @if (Route::has('register'))
                                 <a
                                     href="{{ route('register') }}"
-                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                    class="rounded-md px-3 py-2 text-red-500 ring-1 ring-transparent transition hover:text-red/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                 >
                                     Register
                                 </a>
@@ -39,7 +39,7 @@
 
             <div class="content flex flex-col items-center justify-center text-center">
                 <img src="/img/pizza-house.png" alt="pizza house logo" class="mb-6 max-w-full h-auto" />
-                <div class="title m-b-md text-3xl font-bold text-black dark:text-white">
+                <div class="text-red-500  m-b-md text-3xl font-bold text-red dark:text-red-500">
                     The North's Best Pizzas
                 </div>
 

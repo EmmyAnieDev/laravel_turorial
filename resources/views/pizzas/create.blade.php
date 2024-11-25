@@ -7,32 +7,32 @@
             <div class="content flex flex-col items-center justify-center text-center">
                 <div class="wrapper create-pizza">
 
-                    <h1> Create a new Pizza </h1>
+                    <h1 class="text-red-700 dark:text-red-500"> Create a new Pizza </h1>
 
                     <form action="/pizzas" method="POST">
                         @csrf <!-- protects the form from cross-site request forgery attacks. -->
-                        <label for="name">Your name:</label>
+                        <label for="name" class="text-red-700 dark:text-red-500">Your name:</label>
                         <input type="text" id="name" name="name">
-                        <label for="type">Choose pizza type:</label>
+                        <label for="type" class="text-red-700 dark:text-red-500">Choose pizza type:</label>
                         <select name="type" id="type">
                             <option value="Pepperoni">Pepperoni</option>
                             <option value="Margherita">Margherita</option>
                             <option value="BBQ Chicken">BBQ Chicken</option>
                         </select>
-                        <label for="base">Choose base type:</label>
+                        <label for="base" class="text-red-700 dark:text-red-500">Choose base type:</label>
                         <select name="base" id="base">
                             <option value="Cheesy Crust">Cheesy Crust</option>
                             <option value="Thin Crust">Thin Crust</option>
                             <option value="Stuffed Crust">Stuffed Crust</option>
                         </select>
-                        <fieldset>
+                        <fieldset  class="text-red-700 dark:text-red-500">
                             <label>Extra toppings:</label>
                             <input type="checkbox" name="toppings[]" value="mushrooms"> Mushrooms <br/>
                             <input type="checkbox" name="toppings[]" value="peppers"> Peppers <br/>
                             <input type="checkbox" name="toppings[]" value="garlic"> Garlic <br/>
                             <input type="checkbox" name="toppings[]" value="olives"> Olives <br/>
                         </fieldset>
-                        <label for="price">Your price:</label>
+                        <label for="price" class="text-red-700 dark:text-red-500">Your price:</label>
                         <input type="number" id="price" name="price">
                         <input type="submit" value="Order Pizza">
                     </form>

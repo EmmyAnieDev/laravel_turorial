@@ -5,7 +5,7 @@
     <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
         <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
             <div class="content flex flex-col items-center justify-center text-center">
-                <h1 class="title m-b-md text-3xl font-bold text-black dark:text-white">
+                <h1 class=" m-b-md text-7xl font-bold text-red-500 dark:text-red-400">
                     Pizza List
                 </h1>
 
@@ -13,7 +13,7 @@
 
                     @foreach($pizzas as $pizza)
 
-                        <div class="text-lg text-black dark:text-white">
+                        <div class="text-lg text-red-500 dark:text-red-400">
 
                             <h4>
                                 <a href="/pizzas/{{ $pizza->id }}" class="hover:underline">
