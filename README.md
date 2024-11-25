@@ -45,3 +45,5 @@
 -   Laravel comes with complete Authenticated system. A lot of the Backend is setup for us, we just need to create the Frontend.
 
 -   To install UI package we run "composer require laravel/ui", then "php artisan ui vue --auth", then "npm install" && "npm run dev"
+
+-   To check the list of all Routes in app, we run "php artisan route:list".

@@ -25,7 +25,7 @@ Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
 
 
 
-
-Auth::routes();
+// Disables user registration routes while keeping other authentication routes like login and password reset enabled.
+Auth::routes(["register" => false]);
 
 Route::get('/home', [HomeController::class, 'index']);
