@@ -12,7 +12,7 @@
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
+            @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js'])
         @else
            <link href="/css/main.css" rel="stylesheet">
         @endif

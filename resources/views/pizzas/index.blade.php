@@ -14,7 +14,13 @@
                     @foreach($pizzas as $pizza)
 
                         <div class="text-lg text-black dark:text-white">
-                        {{ $pizza->id }}: {{ $pizza->type }} - {{ $pizza->base }} - ${{ $pizza->price }} - {{ $pizza->name }} 
+
+                            <h4>
+                                <a href="/pizzas/{{ $pizza->id }}" class="hover:underline">
+                                    {{ $pizza->id }}: {{ $pizza->type }} - {{ $pizza->base }} - ${{ $pizza->price }} - {{ $pizza->name }}
+                                </a>
+                            </h4> 
+
                         </div>
 
                     @endforeach

@@ -35,3 +35,9 @@
 -   In MySQL we can't store an Array as a data type but we can store JSON strig that can represet an Array.
 
 -   Attribute casting in Laravel is a feature that allows you to automatically convert model attributes to a specific data type when they are accessed or saved.
+
+-   SAAS: This is a stylesheet language that allows us to do a number of things that regular CSS can't do like Functions and nested rules.
+
+-   Browser can't understannd SAAS in it raw form, so we don't add it to our "Public" directory.
+
+-   To be able to use the SAAS we need to istall a package called "vite" by running "npm install", then "npm add -D sass", then "npm run dev"
