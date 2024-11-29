@@ -30,13 +30,13 @@
 
                     @endif
 
-                    <form action="/pizzas/{{$pizza->id}}" method="POST">
+                    <form action=" {{ route('pizzas.destroy', $pizza->id ) }} " method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="create-pizza-link">Delete Order</button>
                     </form>
 
-                    <a href="/pizzas" class="red-text"><- Back to all pizzas</a>
+                    <a href="  {{ route('pizzas.index') }}  " class="red-text"><- Back to all pizzas</a>
             
                 @else
                         No Pizza found for the given Id.

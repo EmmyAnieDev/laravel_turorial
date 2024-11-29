@@ -16,7 +16,7 @@
                         <div class="text-lg text-red-500 dark:text-red-400">
 
                             <h4>
-                                <a href="/pizzas/{{ $pizza->id }}" class="hover:underline">
+                                <a href=" {{ route('pizzas.show', $pizza->id) }} " class="hover:underline">
                                     {{ $pizza->id }}: {{ $pizza->type }} - {{ $pizza->base }} - ${{ $pizza->price }} - {{ $pizza->name }}
                                 </a>
                             </h4> 

@@ -9,7 +9,7 @@
 
                     <h1 class="text-red-700 dark:text-red-500"> Create a new Pizza </h1>
 
-                    <form action="/pizzas" method="POST">
+                    <form action=" {{ route('pizzas.index') }}  " method="POST">
                         @csrf <!-- protects the form from cross-site request forgery attacks. -->
                         <label for="name" class="text-red-700 dark:text-red-500">Your name:</label>
                         <input type="text" id="name" name="name">
