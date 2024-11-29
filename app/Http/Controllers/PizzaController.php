@@ -9,10 +9,10 @@ class PizzaController extends Controller
 {
 
     # This ensures that all methods in the controller are protected by the auth middleware, requiring the user to be authenticated to access them.
-    // public function __construct()
-    // {
-    //     $this->middleware('auth')->except(['create', 'store']);
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['create', 'store']);
+    }
 
 
     public function index(){
