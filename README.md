@@ -47,3 +47,9 @@
 -   To install UI package we run "composer require laravel/ui", then "php artisan ui vue --auth", then "npm install" && "npm run dev"
 
 -   To check the list of all Routes in app, we run "php artisan route:list".
+
+-   To create a Controller, Migration and Model files at once for a particular data type we want to store in a separate table in our database
+
+-   To do the above line, run "php artisan make:model Kebab -mc"
+
+-   I added a flag so we can automatically create a migration and controller using the (-mc)
